@@ -3,8 +3,19 @@ namespace Ucu.Poo.RoleplayGame;
 
 public class Dwarf: ICharacter
 {
+    protected int victoryPoints;
     private int health = 100;
-
+    public int VP
+    {
+        get
+        {
+            return this.victoryPoints;
+        }
+        set
+        {
+            this.victoryPoints = value;
+        }
+    }
     private List<IItem> items = new List<IItem>();
 
     public Dwarf(string name)
