@@ -3,14 +3,25 @@ namespace Ucu.Poo.RoleplayGame;
 
 public class Archer: ICharacter
 {
+    protected int victoryPoints;
     private int health = 100;
-
+    public int VP
+    {
+        get
+        {
+            return this.victoryPoints;
+        }
+        set
+        {
+            this.victoryPoints = value;
+        }
+    }
     private List<IItem> items = new List<IItem>();
 
     public Archer(string name)
     {
         this.Name = name;
-
+        
         this.AddItem(new Bow());
         this.AddItem(new Helmet());
     }

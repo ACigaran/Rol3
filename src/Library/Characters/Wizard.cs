@@ -3,8 +3,19 @@ namespace Ucu.Poo.RoleplayGame;
 
 public class Wizard: IMagicCharacter
 {
+    protected int victoryPoints;
     private int health = 100;
-
+    public int VP
+    {
+        get
+        {
+            return this.victoryPoints;
+        }
+        set
+        {
+            this.victoryPoints = value;
+        }
+    }
     private List<IItem> items = new List<IItem>();
 
     private List<IMagicalItem> magicalItems = new List<IMagicalItem>();

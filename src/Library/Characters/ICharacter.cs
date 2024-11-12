@@ -9,6 +9,7 @@ public interface ICharacter
     int AttackValue { get; }
 
     int DefenseValue { get; }
+    int VP { get; set; }
 
     void AddItem(IItem item);
 
